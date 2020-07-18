@@ -12,7 +12,7 @@ struct HabitListView: View {
                 .edgesIgnoringSafeArea(.all)
             ScrollView() {
                 VStack {
-                    Text("cedar")
+                    Text("streak")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.cedarGreen)
