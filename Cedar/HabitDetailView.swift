@@ -14,12 +14,13 @@ struct HabitDetailView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     HStack {
-                        ForEach(0..<5) { idx in
+                        /*ForEach(0..<5) { idx in
                             Circle()
                                 .foregroundColor(habitViewModel.completionDaysAgo.contains(4 - idx) ? Color.cedarGreen : Color(.sRGB, white: 0, opacity: 0.10))
                                 .frame(width: 6, height: 6)
-                        }
-                    }
+                        }*/
+                        CalendarStreakView()
+                    }      
                     Button(action: {
                         self.habitsStore.deleteHabit(with: self.habitViewModel.id)
                         self.onClose()
@@ -28,7 +29,7 @@ struct HabitDetailView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color.red)
                     }
-                    .navigationBarTitle(habitViewModel.title)
+                    //.navigationBarTitle(habitViewModel.title)
                     .navigationBarItems(trailing: Button(action: {
                         self.onClose()
                     }, label: {
