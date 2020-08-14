@@ -19,8 +19,13 @@ struct HabitDetailView: View {
                                 .foregroundColor(habitViewModel.completionDaysAgo.contains(4 - idx) ? Color.cedarGreen : Color(.sRGB, white: 0, opacity: 0.10))
                                 .frame(width: 6, height: 6)
                         }*/
-                        CalendarStreakView()
-                    }      
+                        CalendarStreakView(interval: .init()) { _ in
+                            Text("30")
+                                .padding(8)
+                                .background(Color.blue)
+                                .cornerRadius(8)
+                        }
+                    }
                     Button(action: {
                         self.habitsStore.deleteHabit(with: self.habitViewModel.id)
                         self.onClose()
