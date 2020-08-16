@@ -34,7 +34,7 @@ struct HabitDetailView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color.red)
                     }
-                    //.navigationBarTitle(habitViewModel.title)
+                    .navigationBarTitle(habitViewModel.title)
                     .navigationBarItems(trailing: Button(action: {
                         self.onClose()
                     }, label: {
